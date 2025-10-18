@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://101.6.160.22:9280/AIOE/ -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清华iCenter智能硬件创新学习平台</title>
+    <link rel="stylesheet" href="./清华iCenter智能硬件创新学习平台_files/reset.css">
+    <link rel="stylesheet" href="./清华iCenter智能硬件创新学习平台_files/header.css">
+    <link rel="stylesheet" href="./清华iCenter智能硬件创新学习平台_files/index.css">
+    <!-- <link rel="shortcut icon" href="http://101.6.160.22:9280/AIOE/images/favicon.ico"> -->
+</head>
+<body>
+    <div class="warp">
+        <!-- 头部导航（保持原样） -->
+        <header class="header">
+            <div class="logo">
+                <img src="./清华iCenter智能硬件创新学习平台_files/LOGO.svg" alt="logo">
+            </div>
+            <nav class="header_right">
+                <ul>
+                    <li><a href="#project-platform">实验平台</a></li>
+                    <li><a href="#project-achievements">项目成果</a></li>
+                    <li><a href="#project-team">项目团队</a></li>
+                    <!-- <li><a href="#project-introduction">项目介绍</a></li> -->
+                    <li class="show_list">
+                        <a href="#project-introduction">项目介绍</a>
+                        <span class="down-arrow"></span>
+                        <ul class="move_list">
+                            <li><a href="#project-1">LLM碳足迹量化</a></li>
+                            <li><a href="#project-2">LLM-GreenServe</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#project-significance">项目意义</a></li> <!-- 新增锚点链接 -->
+                </ul>
+            </nav>
+        </header>
+
+        <!-- 轮播图（保持原样） -->
+        <div class="banner">
+            <div class="banner_wrap">
+                <ul class="banner_img">
+                    <li class="image" style="display: none;"><img src="./清华iCenter智能硬件创新学习平台_files/LLM_GreenServe.png" alt=""></li>
+                    <li class="image" style="display: none;"><img src="./清华iCenter智能硬件创新学习平台_files/AIGC_eng.png" alt=""></li>
+                    <!-- <li class="image" style="display: none;"><img src="./清华iCenter智能硬件创新学习平台_files/banner_anniversary2.jpg" alt=""></li> -->
+                </ul>
+                <div class="dots">
+                    <span class="first dots_select"></span>
+                    <span class="second"></span>
+                    <!-- <span class="third"></span> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 主要内容区域 -->
+        <div class="content">
+            <!-- 新增内容块3：项目意义（关键补充） -->
+            <div class="content_four" id="project-significance"> <!-- 新增模块，设置id用于导航锚点 -->
+                <div class="center_block">
+                    <div class="content_info">
+                        <h1>项目意义</h1>
+                        <p>当前，大语言模型在广泛部署与应用过程中面临的高能耗问题，已成为制约其规模化与可持续发展的关键瓶颈。
+                            推理过程中的预填充阶段和解码阶段在计算资源消耗模式上具有显著差异，
+                            而现有推理引擎（例如vLLM）所采用的静态或基于简单规则的调度策略，难以在动态变化的工作负载下实现能效最优。</p>
+                    </div>
+                    <!-- 可选配图（根据需要取消注释并替换图片路径） -->
+                    <div class="mid">
+                        <img src="./清华iCenter智能硬件创新学习平台_files/significance.svg" alt="项目意义示意图">
+                    </div>
+                </div>
+            </div>
+            <div class="content_two">
+            <!-- 原有内容块2：碳足迹分析 -->
+                <div class="center_block" id="project-1">
+                    <div class="center_block">
+                        <div class="content_info">
+                            <h1>量化大语言模型推理中的碳足迹分析</h1>
+                            <p>本研究系统分析了LLM推理过程中的碳排放影响因素，包括硬件配置、模型规模和架构设计等多个维度。
+                                通过建立碳足迹量化测试流程，我们对LLM推理过程中的碳排放进行了全面分析，并提出了未来的一些优化策略。</p>
+                        </div>
+                        <div class="mid">
+                            <img src="./清华iCenter智能硬件创新学习平台_files/AIGC_fig.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 原有内容块1：PAPDS策略 -->
+            <div class="content_three">
+                <div class="center_block" id="project-2">
+                    <div class="content_info">
+                        <h1>PAPDS：一种功耗感知的动态P/D比例调度策略</h1>
+                        <p>通过实时采集算力设备的功耗、利用率和温度等多维度硬件指标，通过PID反馈控制动态调整推理任务的P/D任务预算分配比例，在保障模型性能的前提下，使运行时功耗尽量贴近目标功耗，以平滑功耗曲线，提升整体能效。</p>
+                    </div>
+                    <div class="mid">
+                        <img src="./清华iCenter智能硬件创新学习平台_files/PAPDS.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 原有内容块1：PAPDS策略 -->
+            <div class="content_three">
+                <div class="center_block" id="project-platform">
+                    <div class="content_info">
+                        <h1>LLM实训平台</h1>
+                        <p>基于英伟达A800显卡（80G显存）的LLM实训平台，提供LLM模型训练、推理、功耗检测等，
+                            已部署vLLM服务平台、vLLM能耗监测算法、P/D调节算法等，便于后续进一步开发。</p>
+                    </div>
+                    <div class="mid">
+                        <img src="./清华iCenter智能硬件创新学习平台_files/nvidia.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="content_seven">
+                <div class="center_block" id="project-platform">
+                    <div class="content_info">
+                        <h1>LLM实训平台</h1>
+                        <p>基于英伟达A800显卡的LLM实训平台</p>
+                    </div>
+                    <div class="mid">
+                        <img src="./清华iCenter智能硬件创新学习平台_files/nvidia.png" alt="">
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+        <!-- 页脚（保持原样） -->
+        <div class="footer"></div>
+    </div>
+
+    <!-- 脚本文件（保持原样） -->
+    <script type="text/javascript" src="./清华iCenter智能硬件创新学习平台_files/jquery-3.3.1.min.js.下载"></script>
+    <script type="text/javascript" src="./清华iCenter智能硬件创新学习平台_files/index.js.下载"></script>
+</body>
+</html>
