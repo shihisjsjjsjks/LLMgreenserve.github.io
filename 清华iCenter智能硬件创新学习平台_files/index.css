@@ -1,0 +1,211 @@
+/* header 头部样式*/
+/* 在header.css里 */
+
+/*banner 轮播图样式*/
+/* 内容滑入动画-从左侧滑入 */
+.banner {
+	animation: bounceInLeft 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0s 1 alternate forwards;
+	-webkit-animation: bounceInLeft 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0s 1 alternate forwards;
+	/*Safari and Chrome*/
+}
+@keyframes bounceInLeft {
+	0% {
+		opacity: 0;
+		transform: translate3d(-3000px, 0, 0);
+	}
+
+	100% {
+		transform: none;
+	}
+}
+
+.banner{
+	width: 100%;
+}
+.banner_wrap{
+	/* min-height: 513px; */
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	position: relative;
+}
+.banner_wrap::after {/* 用于动态撑开盒子 */
+	content: "";
+	display: block;
+	/*这里的padding =  height / width*/
+	padding-bottom: 33.85%;
+}
+.banner_wrap .banner_img{
+	height: 100%;
+	margin: 0 auto;
+	width: 200%;
+	position: relative;
+}
+.banner_wrap .banner_img li{
+	float: left;
+	height: 100%;
+	width: 50%;
+	margin: 0 auto;
+	position: absolute;
+}
+.banner_wrap .banner_img li img{
+	max-width: 100%;
+	/* max-height: 100%; */
+	display: block;
+	margin: auto;
+}
+
+.banner_wrap .dots{
+    /*加入绝对定位 父级元素为.box父相子绝 */
+	position: absolute;
+	bottom: 0;
+	/*修改背景颜色*/
+	background-color: rgba(0, 0, 0, 0);
+	/*自动撑成图片尺寸的100%*/
+	left: 0;
+	right: 0;
+	/*设置高度为50px 水平居中 垂直居中*/
+	height: 50px;
+	text-align:center;
+	/*行高等于高度时就显示垂直居中*/
+	line-height: 50px;
+    cursor: default;
+    user-select: none;
+}
+.banner_wrap .dots>span{
+    /*使span变成行内块元素,将其横排显示*/
+	display:inline-block;
+	width: 10px;
+	height: 10px;
+	background: #fff;
+	/*这个属性允许设置圆角边框,当设置为50%时可得到一个圆形*/
+	border-radius: 50%;
+	/*每个小圆点直接都相距2px*/
+	margin: 0 4px;
+    cursor: pointer;
+}
+.dots_select{
+    background-color: #dcc55a!important;
+}
+
+/*主体内容样式*/
+/* 内容滑入动画-从右侧滑入 */
+.content {
+    animation: bounceInRight 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0s 1 alternate forwards;
+    -webkit-animation: bounceInRight 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0s 1 alternate forwards;/*Safari and Chrome*/
+}
+
+@keyframes bounceInRight {
+    0% {
+        opacity: 0;
+        transform: translate3d(3000px, 0, 0);
+    }
+
+    100% {
+        transform: none;
+    }
+}
+/*第一部分*/
+/*第二部分*/
+.content_two{
+	display: flex;
+	/* max-width: 1513px; */
+	width: 100%;
+	background: gainsboro;
+	text-align: center;
+	height: 500px;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+.center_block{height: 75%;max-width: 1513px;display: block;margin: auto;}
+.content_info{float: left;width: 45%;height: 100%;padding-left: 100px;vertical-align: middle;display: table-cell;text-align: left;padding-top: 50px;}
+.content_info h1{margin: 20 auto;font-size: 40px;color: #333;font-weight: bold;line-height: 70px;}
+.content_info p{text-align: left;margin: 20 auto;padding-top: 40px;font-size: 20px;color: #666;line-height: 38px;}
+.mid{position: relative;float: right;width: 45%;height: 100%;}
+.mid img{position: absolute;width: 75%;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+/*第三部分*/
+
+.content_three{
+	display: flex;
+	/* max-width: 1513px; */
+	width: 100%;
+	background: gainsboro;
+	text-align: center;
+	height: 500px;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+.center_block{height: 75%;max-width: 1513px;display: block;margin: auto;}
+.content_info{float: left;width: 45%;height: 100%;padding-left: 100px;vertical-align: middle;display: table-cell;text-align: left;padding-top: 50px;}
+.content_info h1{margin: 20 auto;font-size: 40px;color: #333;font-weight: bold;line-height: 70px;}
+.content_info p{text-align: left;margin: 20 auto;padding-top: 40px;font-size: 20px;color: #666;line-height: 38px;}
+.mid{position: relative;float: right;width: 45%;height: 100%;}
+.mid img{position: absolute;width: 75%;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+
+/*第四部分*/
+.content_four{
+	display: flex;
+	/* max-width: 1513px; */
+	width: 100%;
+	background: gainsboro;
+	text-align: center;
+	height: 500px;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+.center_block{height: 75%;max-width: 1513px;display: block;margin: auto;}
+.content_info{float: left;width: 45%;height: 100%;padding-left: 100px;vertical-align: middle;display: table-cell;text-align: left;padding-top: 50px;}
+.content_info h1{margin: 20 auto;font-size: 40px;color: #333;font-weight: bold;line-height: 70px;}
+.content_info p{text-align: left;margin: 20 auto;padding-top: 40px;font-size: 20px;color: #666;line-height: 38px;}
+.mid{position: relative;float: right;width: 45%;height: 100%;}
+.mid img{position: absolute;width: 75%;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+
+
+/*第五部分*/
+.content_five{
+	display: flex;
+	/* max-width: 1513px; */
+	width: 100%;
+	background: gainsboro;
+	text-align: center;
+	height: 500px;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+.center_block{height: 75%;max-width: 1513px;display: block;margin: auto;}
+.content_info{float: left;width: 45%;height: 100%;padding-left: 100px;vertical-align: middle;display: table-cell;text-align: left;padding-top: 50px;}
+.content_info h1{margin: 20 auto;font-size: 40px;color: #333;font-weight: bold;line-height: 70px;}
+.content_info p{text-align: left;margin: 20 auto;padding-top: 40px;font-size: 20px;color: #666;line-height: 38px;}
+.mid{position: relative;float: right;width: 45%;height: 100%;}
+.mid img{position: absolute;width: 75%;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+
+/*第五部分*/
+.content_six{
+	display: flex;
+	/* max-width: 1513px; */
+	width: 100%;
+	background: gainsboro;
+	text-align: center;
+	height: 500px;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+.center_block{height: 75%;max-width: 1513px;display: block;margin: auto;}
+.content_info{float: left;width: 45%;height: 100%;padding-left: 100px;vertical-align: middle;display: table-cell;text-align: left;padding-top: 50px;}
+.content_info h1{margin: 20 auto;font-size: 40px;color: #333;font-weight: bold;line-height: 70px;}
+.content_info p{text-align: left;margin: 20 auto;padding-top: 40px;font-size: 20px;color: #666;line-height: 38px;}
+.mid{position: relative;float: right;width: 45%;height: 100%;}
+.mid img{position: absolute;width: 75%;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+
+
+/*页脚样式*/
+.footer{background: #333;}
+
+.top{width: 50px;height: 30px;position: fixed;right: 30px;bottom: 50px;display: none;}
+.top img,p{width: 100%;text-align: center;}
+.top p{font-size: 12px;}

@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?ysam16');
+    src:  url('../fonts/icomoon.eot?ysam16#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?ysam16') format('truetype'),
+      url('../fonts/icomoon.woff?ysam16') format('woff'),
+      url('../fonts/icomoon.svg?ysam16#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "黑体";
+}
+em,i {
+    font-style: normal
+}
+li {
+    list-style: none
+}
+a{
+    font: 14px/24px  "黑体";
+    letter-spacing: 1.2px;
+    color: #666;
+    text-decoration: none
+}
+a:hover {
+    color: #c81623 ;
+}
+
+img {
+    border: 0;
+    vertical-align: middle
+}
+input{
+    outline: none;
+}
+button {
+    cursor: pointer;
+    border:none;
+    outline: none;
+}
+/* body {
+    overflow-x: hidden;
+} */
+

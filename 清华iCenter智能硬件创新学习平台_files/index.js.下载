@@ -1,0 +1,68 @@
+var i=0;var time;
+$(document).ready(function () {
+    // 初始默认第一张图片
+    $('.image').eq(0).show().siblings().hide();
+    //调用定时器
+    timer();
+
+    $('.first').click(function () {
+        $('.dots span').removeClass("dots_select") //清除所有点的dots_select类
+        $('.first').addClass("dots_select") //选中first
+        
+        //清除定时器
+        clearInterval(time);
+
+        i=0;
+        //调用定时器
+        show();
+        timer();
+    });
+    $('.second').click(function () {
+        $('.dots span').removeClass("dots_select") //清除所有点的dots_select类
+        $('.second').addClass("dots_select") //选中second
+
+        clearInterval(time);
+
+        i=1;
+        show();
+        timer();
+    });
+    $('.third').click(function () {
+        $('.dots span').removeClass("dots_select") //清除所有点的dots_select类
+        $('.third').addClass("dots_select") //选中third
+
+        clearInterval(time);
+
+        i=2;
+        show();
+        timer();
+    });
+});
+
+
+//创建动画方法
+function show() {
+    $('.image').eq(i).fadeIn(200).siblings().fadeOut(200);
+    if(i==0){
+        $('.dots span').removeClass("dots_select") //清除所有点的dots_select类
+        $('.first').addClass("dots_select") //选中first
+    }
+    else if(i==1){
+        $('.dots span').removeClass("dots_select") //清除所有点的dots_select类
+        $('.second').addClass("dots_select") //选中second
+    }
+    else if(i==2){
+        $('.dots span').removeClass("dots_select") //清除所有点的dots_select类
+        $('.third').addClass("dots_select") //选中third
+    }
+}
+//创建定时器
+function timer() {
+    time = setInterval(function () {
+        show();
+        i++;
+        if (i >= 3) {
+            i=0;
+        }
+    },3000)
+}
